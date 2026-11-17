@@ -1,0 +1,171 @@
+<!-- ============================================================
+     FAQ SLIDESHOW — paste this whole block into a WordPress
+     "Custom HTML" block. Edit the questions/answers below.
+     To add or remove slides, just add/delete a <div class="faqss-slide">.
+     The "X of Y" counter updates automatically.
+     ============================================================ -->
+
+<div id="faqss" class="faqss" role="group" aria-roledescription="carousel" aria-label="Frequently asked questions">
+
+  <h3 class="faqss-title">Requesting a new public trashcan, explained</h3>
+
+  <div class="faqss-viewport">
+
+    <!-- ---------- SLIDE 1 ---------- -->
+    <div class="faqss-slide" role="group" aria-roledescription="slide">
+      <p class="faqss-q">Pick a busy spot on a main street</p>
+      <p class="faqss-a"> The city puts cans on main roads and in high-traffic areas, where people walk their dogs, wait for the bus or come out of a store. They’re “very skeptical” of side streets unless there’s a specific reason, such as a corner store or a bus stop, Pruitt said.</p>
+    </div>
+
+    <!-- ---------- SLIDE 2 ---------- -->
+    <div class="faqss-slide" role="group" aria-roledescription="slide" hidden>
+      <p class="faqss-q">Bus stops are a good bet</p>
+      <p class="faqss-a">Pruitt called RTA stops easy wins because RTA places shelters where there are lots of riders. There’s room for more: only x% of the city’s 2,338 GCRTA stops have a public can within 100 feet, and x stops have no can nearby at all.</p>
+</div>
+
+    <!-- ---------- SLIDE 3 ---------- -->
+    <div class="faqss-slide" role="group" aria-roledescription="slide" hidden>
+      <p class="faqss-q">Be specific about where</p>
+      <p class="faqss-a">The city generally places the can where the requester asks. “They tell you where you want it... we just kind of follow their lead,” Pruitt said. Name the corner or side of the street, and explain who will use it: people getting off the bus, kids walking to school, workers heading to a parking lot.</p>
+    </div>
+
+       <!-- ---------- SLIDE 4 ---------- -->
+    <div class="faqss-slide" role="group" aria-roledescription="slide" hidden>
+      <p class="faqss-q">Need a surface to bolt to</p>
+      <p class="faqss-a">The main obstacle is having no surface to bolt to. For example, the city received requests for outside the Carnegie library in Ohio City, which is surrounded by grass. They have a dozen “composite” cans with bottoms filled with sand that don’t need to be bolted to concrete.</p>
+    </div>
+
+  </div><!-- /viewport -->
+
+  <div class="faqss-nav">
+    <button type="button" class="faqss-btn faqss-prev" aria-label="Previous question">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <span class="faqss-count" aria-live="polite"></span>
+    <button type="button" class="faqss-btn faqss-next" aria-label="Next question">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+</div>
+
+<style>
+  #faqss.faqss{
+    --faqss-ink:#404f54;
+    --faqss-body:#404f54;
+    --faqss-line:#404f54;
+    --faqss-muted:#879599;
+    --faqss-bg:#f4f0e6;
+    box-sizing:border-box;
+    max-width:720px;
+    margin:2rem auto;
+    padding:2.4rem 2.6rem 1.6rem;
+    background:var(--faqss-bg);
+    border:1px solid var(--faqss-line);
+    box-shadow:3px 4px 0 0 rgba(43,41,38,.85);
+    font-family:var(--newspack-theme-font-body, "Inter", "Helvetica", sans-serif);
+    -webkit-font-smoothing:antialiased;
+  }
+  #faqss.faqss *{box-sizing:border-box;}
+
+  #faqss .faqss-title{
+    margin:0 0 1rem;
+    padding:0 0 1rem;
+    border-bottom:2px dotted #879599;
+    font-size:1.45rem;
+    line-height:1.25;
+    font-weight:700;
+    color:var(--faqss-ink);
+    letter-spacing:-.01em;
+    font-family:var(--newspack-theme-font-heading, "Roboto Condensed", "Helvetica", sans-serif);
+  }
+
+  #faqss .faqss-viewport{position:relative;}
+
+  #faqss .faqss-slide{animation:faqss-fade .28s ease both;}
+  #faqss .faqss-slide[hidden]{display:none;}
+  @keyframes faqss-fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+
+  #faqss .faqss-q{
+    margin:.4rem 0 1rem;
+    font-size:1.18rem;
+    font-weight:700;
+    color:var(--faqss-ink);
+    font-family:var(--newspack-theme-font-heading, "Roboto Condensed", "Helvetica", sans-serif);
+  }
+  #faqss .faqss-a{
+    margin:0;
+    font-size:1.06rem;
+    font-weight: 400;
+    line-height:1.62;
+    color:var(--faqss-body);
+  }
+
+  #faqss .faqss-nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:1.8rem;
+    gap:1rem;
+  }
+  #faqss .faqss-count{
+    flex:1 1 auto;
+    text-align:center;
+    font-size:1.05rem;
+    color:var(--faqss-muted);
+    letter-spacing:.01em;
+    font-family:var(--newspack-theme-font-heading, "Roboto Condensed", "Helvetica", sans-serif);
+  }
+  #faqss .faqss-btn{
+    flex:0 0 auto;
+    width:42px;height:42px;
+    display:inline-flex;
+    align-items:center;justify-content:center;
+    padding:0;
+    background:transparent;
+    border:1px solid var(--faqss-line);
+    border-radius:50%;
+    color:var(--faqss-ink);
+    cursor:pointer;
+    transition:background .15s ease,color .15s ease,opacity .15s ease;
+  }
+  #faqss .faqss-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  #faqss .faqss-btn:hover{background:var(--faqss-ink);color:var(--faqss-bg);}
+  #faqss .faqss-btn:focus-visible{outline:2px solid var(--faqss-ink);outline-offset:2px;}
+  #faqss .faqss-btn[disabled]{opacity:0;pointer-events:none;}
+
+  @media (max-width:520px){
+    #faqss.faqss{padding:1.8rem 1.5rem 1.2rem;}
+    #faqss .faqss-title{font-size:1.25rem;}
+    #faqss .faqss-q{font-size:1.08rem;}
+    #faqss .faqss-a{font-size:1rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    #faqss .faqss-slide{animation:none;}
+  }
+</style>
+
+<script>
+  (function(){
+    var root = document.getElementById('faqss');
+    if(!root || root.dataset.ready) return;
+    root.dataset.ready = '1';
+
+    var slides = root.querySelectorAll('.faqss-slide');
+    var prev   = root.querySelector('.faqss-prev');
+    var next   = root.querySelector('.faqss-next');
+    var count  = root.querySelector('.faqss-count');
+    var i = 0, total = slides.length;
+
+    function show(n){
+      i = Math.max(0, Math.min(total - 1, n));
+      for(var s = 0; s < total; s++){ slides[s].hidden = (s !== i); }
+      count.textContent = (i + 1) + ' of ' + total;
+      prev.disabled = (i === 0);
+      next.disabled = (i === total - 1);
+    }
+    prev.addEventListener('click', function(){ show(i - 1); });
+    next.addEventListener('click', function(){ show(i + 1); });
+    show(0);
+  })();
+</script>
