@@ -37,15 +37,16 @@ the arrows disable themselves at each end. Every slide except the first carries
 `hidden`; the script sets it on load anyway, so a slide that keeps or loses it
 by accident still behaves.
 
-## Before this runs
+## The figures on slide 2
 
-Slide 2 has unfilled placeholders:
+> only 12.9% of the city’s 2,338 GCRTA stops have a public can within 100
+> feet, and 1,509 stops have no can nearby at all
 
-> only **x%** of the city's 2,338 GCRTA stops have a public can within 100
-> feet, and **x** stops have no can nearby at all
-
-Both need real figures, which means crossing the receptacle list against GCRTA
-stop locations. Those are not in this repo.
+Signal’s own analysis, crossing the receptacle list against GCRTA stop
+locations. The two clauses use different distances — 100 feet for the first,
+whatever “nearby” was defined as for the second — which is why 12.9% (about
+302 stops) and 1,509 do not add up to 2,338. Worth keeping the second
+threshold written down somewhere in case a reader asks.
 
 ## Caveat if you serve this file directly
 
